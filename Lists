@@ -2,20 +2,27 @@ if __name__ == '__main__':
     N =int(input())
     list=[]
     
-    for _ in range(N):
-        cmd_line= input().split()
-        if cmd_line[0]=="insert":
-            list.insert(int(cmd_line[1]),int(cmd_line[2]))
-        elif cmd_line[0]=="print":
+    for x in range (N):
+        command= input().split()
+        command_word = command[0]
+        if command_word == "insert":
+            i=int( command[1] )
+            e=int( command[2] )
+            list.insert(i, e)
+        elif command_word == "print":
             print(list)
-        elif cmd_line[0]=="remove":
-            list.remove(int(cmd_line[1]))
-        elif cmd_line[0]=="append":
-            list.append(int(cmd_line[1]))
-        elif cmd_line[0]=="sort":
+        elif command_word == "remove":
+            e=int(command[1])
+            list.remove(e)
+        elif command_word =="append":
+            e = int(command[1])
+            list.append(e)
+        elif command_word =="sort":
             list.sort()
-        elif cmd_line[0]=="pop":
+        elif command_word =="pop":
             list.pop()
-        elif cmd_line[0]=="reverse":
+        elif command_word =="reverse":
             list.reverse()
+        
+        
             
